@@ -1,0 +1,633 @@
+.navbar {
+    font-family: "Verdana", sans-serif;
+    position: sticky;
+    top: 12px;
+    z-index: 1000;
+
+    width: 95%;
+    max-width: 1440px;
+    min-height: 90px;
+    margin: 12px auto;
+    padding: 0 35px;
+
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+
+    background-color: #fbfbfb;
+    border: 1px solid #eeeeee;
+    border-radius: 18px;
+    box-shadow: 0 8px 30px rgba(0, 30, 75, 0.08);
+}
+
+.nav-logo img {
+    width: 180px;
+    height: 40px;
+    object-fit: contain;
+}
+
+.nav-links a:hover {
+    background-color: #f3eee8;
+    color: #b28651;
+    box-shadow: 0 0 12px #b28651;
+}
+
+.nav-links a.active,
+.nav-links a {
+    padding: 11px 15px;
+    border-radius: 10px;
+
+    color: #001e4b;
+    text-decoration: none; /* Odstráni podčiarknutie z odkazov */
+    font-size: 14px;
+
+    transition: 0.3s;
+}
+
+
+.nav-cta {
+    padding: 13px 18px;
+
+    color: #fbfbfb;
+    background-color: #001e4b;
+    border-radius: 11px;
+
+    font-size: 13px;
+    text-decoration: none;
+
+    transition: 0.3s;
+}
+
+.nav-cta span {
+    color: #b28651;
+}
+
+.nav-cta:hover {
+    background-color: #b28651;
+    color: white;
+}
+
+.owl {
+    width: 110px;
+    height: 110px;
+    display: block;
+    margin: 0 auto 20px;
+}
+
+.thank-you {
+    position: relative;
+    z-index: 2;
+    width: 90%;
+    max-width: 700px;
+    margin: 0 auto;
+    padding: 65px 25px;
+    text-align: center;
+    background: rgba(255, 255, 255, 0.045);
+    border: 1px solid rgba(255, 255, 255, 0.09);
+    border-radius: 28px;
+    box-shadow: 0 25px 80px rgba(0, 0, 0, 0.25);
+
+}
+
+body:has(.thank-you) {
+    min-height: 100vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    overflow: hidden;
+    background:
+        radial-gradient(circle at 50% 30%, #123766 0%, #001e4b 55%, #00132f 100%);
+    font-family: Verdana, sans-serif;
+    color: #fbfbfb;
+}
+
+
+/* =====================================
+   CREDO CONTACT FORM
+===================================== */
+
+.credo-contact-section {
+    padding: 100px 20px;
+    background: #f5f6f8;
+}
+
+.credo-contact {
+    max-width: 680px;
+    margin: 0 auto;
+    padding: 55px;
+    background: #ffffff;
+    border: 1px solid #e8e9ec;
+    border-radius: 18px;
+    box-shadow: 0 15px 45px rgba(0, 30, 75, 0.06);
+}
+
+/* Nadpis */
+
+.contact-heading {
+    text-align: center;
+    margin-bottom: 40px;
+}
+
+.contact-eyebrow {
+    color: #b28651;
+    font-size: 12px;
+    font-weight: 700;
+    letter-spacing: 2px;
+}
+
+.contact-heading h2 {
+    color: #001e4b;
+    font-size: 34px;
+    margin: 15px 0;
+    font-family: "Trebuchet MS", sans-serif;
+}
+
+.contact-heading p {
+    color: #687386;
+    font-size: 15px;
+    line-height: 1.7;
+    max-width: 480px;
+    margin: 0 auto;
+}
+
+/* Formulár */
+
+.contact-form {
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+}
+
+.form-group {
+    display: flex;
+    flex-direction: column;
+    gap: 8px;
+}
+
+.form-group label {
+    color: #001e4b;
+    font-size: 14px;
+    font-weight: 600;
+}
+
+.form-group input,
+.form-group select,
+.form-group textarea {
+    width: 100%;
+    box-sizing: border-box;
+    padding: 14px 16px;
+    border: 1px solid #dfe3e9;
+    border-radius: 9px;
+    background: #fbfbfc;
+    color: #001e4b;
+    font-family: inherit;
+    font-size: 14px;
+    transition: border-color 0.2s, box-shadow 0.2s;
+}   
+
+.form-group input:focus,
+.form-group select:focus,
+.form-group textarea:focus {
+    outline: none;
+    border-color: #b28651;
+    box-shadow: 0 0 0 3px rgba(178, 134, 81, 0.12);
+    background: #ffffff;
+}
+
+.form-group textarea {
+    resize: vertical;
+    min-height: 120px;
+}
+
+/* Tlačidlo */
+
+.contact-submit {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 15px;
+    padding: 15px 22px;
+    margin-top: 5px;
+    border: none;
+    border-radius: 9px;
+    background: #001e4b;
+    color: #ffffff;
+    font-size: 15px;
+    font-weight: 600;
+    cursor: pointer;
+    transition: background 0.2s, transform 0.2s;
+}
+
+.contact-submit:hover {
+    background: #b28651;
+    transform: translateY(-2px);
+}
+
+.contact-submit span {
+    font-size: 20px;
+}
+
+/* Poznámka */
+
+.contact-note {
+    color: #9299a5;
+    text-align: center;
+    font-size: 12px;
+    line-height: 1.5;
+    margin: 0;
+}
+
+/* Mobil */
+
+@media (max-width: 600px) {
+    .credo-contact-section {
+        padding: 60px 15px;
+    }
+
+    .credo-contact {
+        padding: 30px 20px;
+    }
+
+    .contact-heading h2 {
+        font-size: 27px;
+    }
+}
+
+
+.top-label {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 12px;
+    color: #b28651;
+    font-size: 11px;
+    letter-spacing: 4px;
+    margin-bottom: 25px;
+}
+
+.top-label span {
+    width: 25px;
+    height: 1px;
+    background: #b28651;
+}
+
+.mascot {
+    margin-bottom: 20px;
+}
+
+.owl {
+    width: 125px;
+    height: 125px;
+    display: block;
+    margin: 0 auto;
+    animation: owl-float 3s ease-in-out infinite;
+}
+
+h1 {
+    font-size: clamp(25px, 4vw, 36px);
+    line-height: 1.3;
+    margin-bottom: 18px;
+    color: #fbfbfb;
+}
+
+h1 span {
+    color: #b28651;
+}
+
+.description {
+    color: #c3cede;
+    font-size: 14px;
+    line-height: 1.9;
+    margin-bottom: 25px;
+}
+
+.success {
+    display: inline-flex;
+    align-items: center;
+    gap: 9px;
+    color: #cbd9d0;
+    font-size: 12px;
+    margin-bottom: 30px;
+    padding: 10px 16px;
+    border-radius: 30px;
+    background: rgba(255, 255, 255, 0.06);
+}
+
+.success-dot {
+    width: 7px;
+    height: 7px;
+    background: #72c99a;
+    border-radius: 50%;
+    box-shadow: 0 0 10px #72c99a;
+}
+
+.success-mail
+{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 30px;
+    height: 40px;
+    border-radius: 50%;
+}
+
+.home-button {
+    display: block;
+    width: fit-content;
+    margin: 0 auto;
+    padding: 14px 23px;
+    background: #b28651;
+    color: white;
+    text-decoration: none;
+    border-radius: 10px;
+    font-size: 13px;
+    transition: 0.3s;
+}
+
+.home-button:hover {
+    background: #fbfbfb;
+    color: #001e4b;
+    transform: translateY(-3px);
+}
+
+.home-button span {
+    margin-right: 8px;
+}
+
+.footer-text {
+    margin-top: 45px;
+    color: #73849d;
+    font-size: 9px;
+    letter-spacing: 3px;
+}
+
+
+
+@keyframes owl-float {
+    0%, 100% {
+        transform: translateY(0);
+    }
+
+    50% {
+        transform: translateY(-9px);
+    }
+}
+
+/* FLOATING HEARTS (AI)*/
+
+.hearts {
+    position: fixed;
+    inset: 0;
+    overflow: hidden;
+    pointer-events: none;
+    z-index: 1;
+}
+
+.hearts span {
+    position: absolute;
+    bottom: -50px;
+    color: #b28651;
+    opacity: 0;
+    font-size: 20px;
+    animation: heart-float 10s linear infinite;
+}
+
+.hearts span:nth-child(1) {
+    left: 8%;
+    animation-delay: 0s;
+    font-size: 17px;
+}
+
+.hearts span:nth-child(2) {
+    left: 18%;
+    animation-delay: 3s;
+    font-size: 25px;
+}
+
+.hearts span:nth-child(3) {
+    left: 30%;
+    animation-delay: 6s;
+}
+
+.hearts span:nth-child(4) {
+    left: 42%;
+    animation-delay: 1s;
+    font-size: 14px;
+}
+
+.hearts span:nth-child(5) {
+    left: 55%;
+    animation-delay: 4s;
+    font-size: 24px;
+}
+
+.hearts span:nth-child(6) {
+    left: 66%;
+    animation-delay: 7s;
+}
+
+.hearts span:nth-child(7) {
+    left: 76%;
+    animation-delay: 2s;
+    font-size: 16px;
+}
+
+.hearts span:nth-child(8) {
+    left: 85%;
+    animation-delay: 5s;
+    font-size: 27px;
+}
+
+.hearts span:nth-child(9) {
+    left: 94%;
+    animation-delay: 8s;
+}
+
+.hearts span:nth-child(10) {
+    left: 48%;
+    animation-delay: 9s;
+    font-size: 18px;
+}
+
+@keyframes heart-float {
+    0% {
+        transform: translateY(0) rotate(0deg);
+        opacity: 0;
+    }
+
+    15% {
+        opacity: 0.45;
+    }
+
+    80% {
+        opacity: 0.3;
+    }
+
+    100% {
+        transform: translateY(-110vh) rotate(35deg);
+        opacity: 0;
+    }
+}
+
+@media (max-width: 600px) {
+    .thank-you {
+        padding: 45px 18px;
+    }
+
+    .footer-text {
+        font-size: 8px;
+        letter-spacing: 2px;
+    }
+}
+
+@media (max-width: 400px) {
+    .nav-cta {
+        display: none;
+    }
+}
+body.error-page {
+    min-height: 100vh;
+    box-sizing: border-box;
+    margin: 0;
+    padding: 25px 15px;
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    overflow-x: hidden;
+
+    background:
+        radial-gradient(circle at 50% 30%, #123766 0%, #001e4b 55%, #00132f 100%);
+
+    font-family: Verdana, sans-serif;
+    color: #fbfbfb;
+}
+
+.error-page .thank-you {
+    width: 100%;
+    max-width: 700px;
+    box-sizing: border-box;
+    margin: auto;
+    padding: 65px 30px;
+
+    text-align: center;
+
+    background: rgba(255, 255, 255, 0.045);
+    border: 1px solid rgba(255, 255, 255, 0.09);
+    border-radius: 28px;
+
+    box-shadow: 0 25px 80px rgba(0, 0, 0, 0.25);
+    backdrop-filter: blur(12px);
+}
+
+.error-page .mascot {
+    margin-bottom: 25px;
+}
+
+.error-page .owl {
+    width: 125px;
+    height: 125px;
+    object-fit: contain;
+    margin: 0 auto;
+
+    animation: owl-float 3s ease-in-out infinite;
+}
+
+.error-page h1 {
+    font-size: clamp(25px, 4vw, 36px);
+    line-height: 1.3;
+    margin: 0 0 18px;
+    color: #fbfbfb;
+}
+
+.error-page .description {
+    max-width: 500px;
+    margin: 0 auto 30px;
+
+    color: #c3cede;
+    font-size: 14px;
+    line-height: 1.9;
+}
+
+.error-page .home-button {
+    display: inline-block;
+    width: fit-content;
+    margin: 0 auto;
+    padding: 14px 23px;
+
+    background: #b28651;
+    color: white;
+    text-decoration: none;
+    border-radius: 10px;
+
+    font-size: 13px;
+    transition: 0.3s;
+}
+.owl-bubble {
+    position: absolute;
+    right: 100px;
+    bottom: 100px;
+
+    width: 320px;
+    max-width: 75vw;
+
+    padding: 18px 20px;
+
+    background: #fff;
+    color: #001e4b;
+
+    font-family: "Trebuchet MS", sans-serif;
+    font-size: 15px;
+    line-height: 1.5;
+
+    border-radius: 16px;
+    box-shadow: 0 5px 25px rgba(0, 0, 0, 0.15);
+
+    opacity: 0;
+    visibility: hidden;
+    transform: translateY(10px);
+
+    transition: 0.3s ease;
+    z-index: 1000;
+}
+
+.owl-bubble.visible {
+    opacity: 1;
+    visibility: visible;
+    transform: translateY(0);
+}   
+.error-page .home-button:hover {
+    background: #fbfbfb;
+    color: #001e4b;
+    transform: translateY(-3px);
+}
+
+@media (max-width: 600px) {
+    .error-page .thank-you {
+        padding: 45px 20px;
+    }
+
+    .error-page .owl {
+        width: 110px;
+        height: 110px;
+    }
+}
+
+@media (max-width: 760px) {
+    .navbar {
+        padding: 15px;
+        flex-wrap: wrap;
+        gap: 14px;
+    }
+
+    .nav-links {
+        width: 100%;
+        flex-wrap: wrap;
+        order: 3;
+    }
+
+    .nav-links a {
+        padding: 9px;
+    }
+}

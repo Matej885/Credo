@@ -2,17 +2,177 @@
 <!DOCTYPE html>
 <html lang="sk">
 <head>
-    <link rel="icon" type="image/png" href="Images/Credo_Logo(C).png">
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Credo</title>
-    <link rel="stylesheet" href="style.css">
+
+    <link rel="icon" type="image/png" href="Images/Credo_Logo(C).png">
+    <link rel="stylesheet" href="css/style.css">
+    <link rel="stylesheet" href="css/chat.css">
 </head>
+
 <body>
 
-    <div class="banner_head">
-        <img src="Images/In_Development.jpg" height="500px" width="500px" alt="under_construction" class="under_construction">
+<nav class="navbar">
+    <a href="index.html" class="nav-logo">
+        <img src="Images/Credo_Full_Logo.png" alt="Credo logo">
+        <span><span class="logo-dot"></span></span>
+    </a>
+
+    <div class="nav-links">
+        <a href="index.html">Domov</a>
+        <a href="./flashscreens/thank-you.html">O mne</a>
+        <a href="#partners">Kto využíva naše služby?</a>
+        <a href="#services">Služby</a>
     </div>
-    
+
+    <a href="#contact" class="nav-cta">Kontaktovať nás <span></span></a>
+</nav>
+
+<div class="partners" id="partners">
+    <h2></h2>
+    <div class="partner-logos">
+        <img src="Images/Partner1.png" alt="Partner 1">
+        <img src="Images/Partner2.png" alt="Partner 2">
+        <img src="Images/Partner3.png" alt="Partner 3">
+        <img src="Images/Partner4.png" alt="Partner 4">
+    </div>
+
+<div class="credo-assistant">
+
+    <div class="chat-window" id="chatWindow">
+
+        <div class="chat-header">
+            <div class="chat-title">
+                <span class="chat-status"></span>
+                <div style = "font-family: Trebuchet MS, sans-serif; font-size: 1.2rem; color: #fff;">
+                    <strong>CREDO AI</strong>
+                    <small>Váš digitálny pomocník</small>
+                </div>
+            </div>
+        </div>
+
+        <div class="chat-messages" id="chatMessages">
+            <div class="message ai-message">
+            Ahoj! Som umelá inteligencia CREDO AI a som tu aby som vám pomohla s vašimi otázkami. Ako vám môžem pomôcť dnes?
+            </div>
+        </div>
+
+        <form class="chat-input-area" id="chatForm">
+            <input
+                type="text"
+                id="chatInput"
+                placeholder="Napíšte svoju otázku..."
+                maxlength="1000"
+                autocomplete="off"
+                required
+            >
+            <button type="submit" id="sendButton">➤</button>
+        </form>
+
+    </div>
+<div class="owl-bubble" id="owlBubble"></div>
+    <button class="owl-button" id="owlButton"
+            aria-label="Otvoriť AI asistenta">
+<img
+    src="test/owl_waving.svg"
+    id="owlImage"
+    alt="Sovička Credo"
+>
+
+    </button>
+
+</div>
+
+<section class="credo-contact-section" id="contact">
+    <div class="credo-contact">
+
+        <div class="contact-heading">
+            <span class="contact-eyebrow">KONTAKTUJTE NÁS</span>
+            <h2>Poďme spolupracovať.</h2>
+            <p>
+                Máte záujem o naše služby alebo potrebujete poradiť?
+                Vyplňte formulár a my sa vám ozveme.
+            </p>
+        </div>
+
+<form style="font-family: Trebuchet MS, sans-serif; font-size: 1rem; color: #333;"
+    id="contactForm"
+    action="https://formspree.io/f/xgaaldoq" 
+    method="POST"
+    class="contact-form"
+>
+            <div class="form-group">
+                <label for="name">Meno a priezvisko</label>
+                <input
+                    type="text"
+                    id="name"
+                    name="Meno"
+                    placeholder="Vaše meno"
+                    required
+                >
+            </div>
+
+            <div class="form-group">
+                <label for="email">E-mailová adresa</label>
+                <input
+                    type="email"
+                    id="email"
+                    name="Email"
+                    placeholder="vas@email.sk"
+                    required
+                >
+            </div>
+
+            
+            <div class="form-group">
+                <label for="phone">Telefonné číslo</label>
+                <input
+                    type="phone"
+                    id="phone"
+                    name="phone"
+                    placeholder="+421 123 456 789"
+                    required
+                >
+            </div>
+
+            <div class="form-group">
+                <label for="service">O akú službu máte záujem?</label>
+                <select id="service" name="Služba" required>
+                    <option value="" disabled selected>Vyberte službu</option>
+                    <option value="Vedenie účtovníctva">Vedenie účtovníctva</option>
+                    <option value="Mzdy a personalistika">Mzdy a personalistika</option>
+                    <option value="Daňové priznania">Daňové priznania</option>
+                    <option value="Účtovné a daňové poradenstvo">Účtovné a daňové poradenstvo</option>
+                    <option value="Iné">Iné</option>
+                </select>
+            </div>
+
+            <div class="form-group">
+                <label for="message">Vaša správa</label>
+                <textarea
+                    id="message"
+                    name="Správa"
+                    placeholder="Napíšte nám, s čím vám môžeme pomôcť..."
+                    rows="5"
+                    required
+                ></textarea>
+            </div>
+
+            <button type="submit" class="contact-submit">
+                Odoslať správu
+                <span>→</span>
+            </button>
+
+            <p class="contact-note">
+                Vaše údaje použijeme výhradne na vybavenie vašej požiadavky.
+            </p>
+
+        </form>
+    </div>
+</section>
+
+<script src=".js/chat.js"></script>
+<script src=".js/contact.js"></script>
 </body>
 </html>

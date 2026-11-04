@@ -1,0 +1,248 @@
+
+.credo-assistant {
+    position: fixed;
+    right: 30px;
+    bottom: 25px;
+    z-index: 9999;
+}
+
+/* SOVIČKA */
+
+.owl-button {
+    width: 105px;
+    height: 105px;
+    border: none;
+    background: transparent;
+    cursor: pointer;
+    padding: 0;
+    transition: transform 0.3s ease;
+    animation: owlFloat 3s ease-in-out infinite;
+}
+
+.owl-button:hover {
+    transform: scale(1.1);
+}
+
+.owl-button img {
+    width: 100%;
+    height: 100%;
+    object-fit: contain;
+}
+
+@keyframes owlFloat {
+    0%, 100% { transform: translateY(0); }
+    50% { transform: translateY(-9px); }
+}
+
+/* CHAT OKNO */
+
+.chat-window {
+    position: absolute;
+    right: 0;
+    bottom: 120px;
+    width: 350px;
+    height: 470px;
+    background: #fbfbfb;
+    border-radius: 18px;
+    box-shadow: 0 15px 50px rgba(0, 30, 75, 0.2);
+    overflow: hidden;
+    display: flex;
+    flex-direction: column;
+
+    opacity: 0;
+    visibility: hidden;
+    transform: translateY(15px) scale(0.97);
+    transition: 0.25s ease;
+}
+
+.chat-window.open {
+    opacity: 1;
+    visibility: visible;
+    transform: translateY(0) scale(1);
+}
+
+/* HLAVIČKA */
+
+.chat-header {
+    background: #001e4b;
+    color: white;
+    padding: 18px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+
+.chat-title {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+}
+
+.chat-title strong {
+    display: block;
+    font-size: 14px;
+    letter-spacing: 1px;
+}
+
+.chat-title small {
+    color: #d5dbe5;
+    font-size: 11px;
+}
+
+.chat-status {
+    width: 9px;
+    height: 9px;
+    background: #55c98b;
+    border-radius: 50%;
+}
+
+.chat-close {
+    background: transparent;
+    color: white;
+    border: none;
+    font-size: 27px;
+    cursor: pointer;
+}
+
+/* SPRÁVY */
+
+.chat-messages {
+    flex: 1;
+    padding: 17px;
+    overflow-y: auto;
+    display: flex;
+    flex-direction: column;
+    gap: 12px;
+}
+
+.message {
+    max-width: 85%;
+    padding: 11px 14px;
+    border-radius: 13px;
+    font-size: 13px;
+    line-height: 1.6;
+    overflow-wrap: anywhere;
+}
+
+.ai-message {
+    background: #edf0f5;
+    color: #001e4b;
+    align-self: flex-start;
+}
+
+.user-message {
+    background: #001e4b;
+    color: white;
+    align-self: flex-end;
+}
+
+/* VSTUP */
+
+.chat-input-area {
+    display: flex;
+    padding: 12px;
+    border-top: 1px solid #e5e5e5;
+    gap: 8px;
+}
+
+.chat-input-area input {
+    flex: 1;
+    min-width: 0;
+    border: 1px solid #ddd;
+    border-radius: 9px;
+    padding: 11px;
+    outline: none;
+    font-size: 13px;
+}
+
+.chat-input-area input:focus {
+    border-color: #b28651;
+}
+
+.chat-input-area button {
+    width: 42px;
+    border: none;
+    border-radius: 9px;
+    background: #b28651;
+    color: white;
+    cursor: pointer;
+    font-size: 18px;
+}
+
+.chat-input-area button:disabled {
+    opacity: 0.5;
+    cursor: wait;
+}
+
+/* MOBIL */
+
+@media (max-width: 480px) {
+    .credo-assistant {
+        right: 15px;
+        bottom: 15px;
+    }
+
+    .chat-window {
+        width: calc(100vw - 30px);
+        height: min(470px, 65dvh);
+    }
+
+    .owl-button {
+        width: 85px;
+        height: 85px;
+    }
+}
+.owl-bubble {
+    position: absolute;
+    right: 100px;
+    bottom: 100px;
+
+    width: 320px;
+    max-width: 75vw;
+    box-sizing: border-box;
+
+    padding: 18px 20px;
+
+    background-color: #edf0f5;
+    color: #001e4b;
+
+    font-family: "Trebuchet MS", sans-serif;
+    font-size: 15px;
+    line-height: 1.5;
+
+    border-radius: 16px;
+    border: 1px solid #eeeeee;
+    box-shadow: 0 5px 25px rgba(0, 0, 0, 0.15);
+
+    opacity: 0;
+    visibility: hidden;
+    transform: translateY(10px);
+
+    transition: 0.3s ease;
+    z-index: 10000;
+}
+
+.owl-bubble.visible {
+    opacity: 1;
+    visibility: visible;
+    transform: translateY(0);
+}
+
+.owl-bubble-close {
+    position: absolute;
+    top: 6px;
+    right: 10px;
+
+    border: none;
+    background: transparent;
+    color: #001e4b;
+
+    font-size: 21px;
+    cursor: pointer;
+    line-height: 1;
+    padding: 3px;
+}
+
+.owl-bubble-close:hover {
+    color: #b28651;
+}
