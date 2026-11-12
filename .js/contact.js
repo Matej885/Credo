@@ -23,10 +23,10 @@ form.addEventListener("submit", async function(event) {
             throw new Error("Odoslanie zlyhalo.");
         }
 
-        window.location.href = "flashscreens/thank-you.html";
+        window.location.href = "../flashscreens/thank-you.html";
 
     } catch (error) {
-        window.location.href = "flashscreens/error.html";
+        window.location.href = "../flashscreens/error.html";
         button.disabled = false;
         button.textContent = "Odoslať správu →";
         console.error(error);
